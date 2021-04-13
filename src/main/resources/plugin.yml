@@ -1,0 +1,6 @@
+name: Crowbar
+version: 1.0
+main: me.avixk.Crowbar.Main
+api-version: 1.16
+description: Locks the server if key plugins are missing.
+authors: [avixk]
