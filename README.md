@@ -1,5 +1,5 @@
 # Crowbar
-A quick and dirty plugin to lock the server when crucial plugins are not enabled.
+A quick and dirty spigot plugin to lock the server when crucial plugins are not enabled.
 
 It only keeps players from joining, it will not kick any players. 
 Players on the server's whitelist will be allowed to join regardless, and will be sent a warning message upon join.
