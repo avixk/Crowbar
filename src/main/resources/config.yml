@@ -6,19 +6,25 @@ enabled: true
  # kick_message: the message sent to players when crowbar is activated. {plugins} will be replaced with a list of
  #   plugins that are not loaded.
  # plugin_list_placeholder: The format of the {plugins} placeholder. Use {plugin} placeholder to target the individual plugin.
-kick_message: '\n&c[Crowbar] &eThe server is currently whitelisted because the following plugins are not loaded:{plugins}'
-plugin_list_placeholder: '\n&f -&7 {plugin}'
+kick_message_format: '\n&c[Crowbar] &eThe server is currently disabled because the following plugins are not loaded:{plugins}'
+kick_message_plugins_placeholder: '\n&f -&7 {plugin}'
 
- # message sent to whitelisted players who join during crowbar event
-crowbar_join_message: '&c[Crowbar] The server is currently whitelisted because the following plugins are not loaded: {plugins}'
-crowbar_join_plugin_list_placeholder: '&e{plugin}&c, '
+ # kick_all_during_crowbar: Server will kick all players when crowbar engages if enabled. kick_message above will be used.
+kick_all_during_crowbar: true
+ # whitelist_during_crowbar: Server will be unjoinable except by admins when enabled.
+whitelist_during_crowbar: true
 
- # changes the server list motd and maxplayers when crowbar is engaged
+ # kick_message_format: Message sent to whitelisted players who join during crowbar event
+ # Use {plugins} as a placeholder
+whitelisted_message_format: '&c[Crowbar] The server is currently whitelisted because the following plugins are not loaded: {plugins}'
+whitelisted_message_plugins_placeholder: '&e{plugin}&c, '
+
+ # server_list_motd: Changes the server list motd and maxplayers when crowbar is engaged.
 server_list_motd:
   change_when_crowbar: true
   message: '&cError &8-&7 Required plugins not enabled.'
   maxplayers: 0
 
- # List the plugins that must be loaded for a non-whitelisted player joins.
+ # required_plugins: List of plugins that must be loaded at all times. Crowbar will engage if one or more is not loaded.
 required_plugins:
   - 'WorldGuard'
